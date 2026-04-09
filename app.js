@@ -130,7 +130,7 @@ function buildPayload() {
         province: getNullableText(normalizeUpperCase(formData.get("province"))),
         postalCode: getNullableText(formData.get("postalCode")),
         externalReference: getNullableNumber(formData.get("externalReference")),
-        notificationDisabled: formData.get("notificationDisabled") === "on",
+        notificationDisabled: false,
         additionalEmails: getNullableText(normalizeLowerCase(formData.get("additionalEmails"))),
         municipalInscription: getNullableNumber(formData.get("municipalInscription")),
         stateInscription: getNullableNumber(formData.get("stateInscription")),
