@@ -20,7 +20,7 @@ const samplePayload = {
     foreignCustomer: false
 };
 
-const API_URL = "http://localhost:3000/api/customers";
+const API_URL = "https://cadastro-tsunami-479954408223.southamerica-east1.run.app/api/customers";
 
 const form = document.querySelector("#customerForm");
 const fillSampleButton = document.querySelector("#fillSample");
