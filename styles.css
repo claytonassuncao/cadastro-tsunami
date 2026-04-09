@@ -1,0 +1,146 @@
+body {
+  color: #16324f;
+  background:
+    radial-gradient(circle at top left, rgba(33, 150, 243, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(0, 188, 212, 0.14), transparent 26%),
+    linear-gradient(180deg, #f4fbff 0%, #e8f0f7 100%);
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-card {
+  position: relative;
+  border-radius: 2rem;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(247, 251, 255, 0.92));
+  box-shadow: 0 28px 70px rgba(22, 50, 79, 0.14);
+}
+
+.hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.12), transparent 34%);
+  pointer-events: none;
+}
+
+.logo-shell {
+  width: min(100%, 320px);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border-radius: 1.75rem;
+}
+
+.brand-logo {
+  display: block;
+  width: min(100%, 220px);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  color: #0f4c81 !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  border-color: rgba(15, 76, 129, 0.12) !important;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.display-title {
+  font-size: clamp(2rem, 3vw, 2.9rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #0f2740;
+}
+
+.hero-copy {
+  max-width: 580px;
+  color: #577089;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.form-panel {
+  position: relative;
+  padding: 1.5rem;
+  border: 1px solid rgba(15, 76, 129, 0.08);
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.section-heading h2 {
+  color: #14304d;
+  font-weight: 700;
+}
+
+.form-label {
+  margin-bottom: 0.6rem;
+  color: #31506d;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.form-control {
+  border: 1px solid rgba(49, 80, 109, 0.12);
+  border-radius: 1rem;
+  padding: 0.95rem 1rem;
+  background-color: rgba(249, 252, 255, 0.96);
+  box-shadow: inset 0 1px 2px rgba(15, 39, 64, 0.02);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: rgba(14, 165, 233, 0.65);
+  box-shadow: 0 0 0 0.3rem rgba(14, 165, 233, 0.14);
+  transform: translateY(-1px);
+}
+
+.btn {
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary {
+  border-color: transparent;
+  background: linear-gradient(135deg, #0f7cc0, #11a3d8);
+  box-shadow: 0 14px 24px rgba(17, 163, 216, 0.28);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(135deg, #0d6ea9, #0f95c7);
+}
+
+.btn-outline-secondary {
+  border-color: rgba(49, 80, 109, 0.16);
+  color: #31506d;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.action-row {
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .hero-card {
+    border-radius: 1.5rem;
+  }
+
+  .form-panel {
+    padding: 1.1rem;
+    border-radius: 1.25rem;
+  }
+
+  .logo-shell {
+    width: min(100%, 250px);
+  }
+
+  .brand-logo {
+    width: min(100%, 180px);
+  }
+}
