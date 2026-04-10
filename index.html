@@ -31,68 +31,190 @@
                             </p>
                         </header>
 
+                        <section class="form-panel mb-4 d-none" aria-hidden="true">
+                            <div class="environment-switcher">
+                                <span class="form-label d-block mb-2">Ambiente Asaas</span>
+                                <div class="btn-group environment-toggle" role="group" aria-label="Selecao de ambiente Asaas">
+                                    <input
+                                        type="radio"
+                                        class="btn-check"
+                                        name="environment"
+                                        id="environmentDevelopment"
+                                        value="development"
+                                    >
+                                    <label class="btn btn-outline-secondary" for="environmentDevelopment">
+                                        Desenvolvimento
+                                    </label>
+
+                                    <input
+                                        type="radio"
+                                        class="btn-check"
+                                        name="environment"
+                                        id="environmentProduction"
+                                        value="production"
+                                        checked
+                                    >
+                                    <label class="btn btn-outline-secondary" for="environmentProduction">
+                                        Producao
+                                    </label>
+                                </div>
+                                <p class="environment-helper-text mb-0">
+                                    Escolha qual ambiente da API deve receber este cadastro.
+                                </p>
+                            </div>
+                        </section>
+
                         <section class="form-panel">
                             <div class="section-heading mb-4">
                                 <h2 class="h4 mb-2">Dados do cadastro</h2>
                                 <p class="text-secondary mb-0">
-                                    Revise os campos obrigatorios antes de enviar.
+                                    Cadastre o responsavel, vincule os desbravadores e acompanhe o valor total a pagar em tempo real.
                                 </p>
                             </div>
 
                             <form id="customerForm" class="row g-3 g-lg-4">
-                                <div class="col-md-6">
-                                    <label for="name" class="form-label">Nome</label>
-                                    <input id="name" name="name" type="text" class="form-control form-control-lg" required>
-                                </div>
+                                <div class="col-12">
+                                    <div class="subsection-card">
+                                        <div class="subsection-header">
+                                            <div>
+                                                <span class="subsection-kicker">Etapa 1</span>
+                                                <h3 class="h5 mb-1">Responsavel financeiro</h3>
+                                                <p class="text-secondary mb-0">
+                                                    Esses dados continuam sendo usados para o cadastro principal.
+                                                </p>
+                                            </div>
+                                        </div>
 
-                                <div class="col-md-6">
-                                    <label for="cpfCnpj" class="form-label">CPF</label>
-                                    <input id="cpfCnpj" name="cpfCnpj" type="text" inputmode="numeric" class="form-control form-control-lg" required>
-                                </div>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label for="name" class="form-label">Nome</label>
+                                                <input id="name" name="name" type="text" class="form-control form-control-lg" required>
+                                            </div>
 
-                                <div class="col-md-6">
-                                    <label for="email" class="form-label">E-Mail</label>
-                                    <input id="email" name="email" type="email" class="form-control form-control-lg" required>
-                                </div>
+                                            <div class="col-md-6">
+                                                <label for="cpfCnpj" class="form-label">CPF</label>
+                                                <input id="cpfCnpj" name="cpfCnpj" type="text" inputmode="text" class="form-control form-control-lg" required>
+                                            </div>
 
-                                <div class="col-md-3">
-                                    <label for="phone" class="form-label">Telefone</label>
-                                    <input id="phone" name="phone" type="text" inputmode="numeric" class="form-control form-control-lg">
-                                </div>
+                                            <div class="col-md-6">
+                                                <label for="email" class="form-label">E-Mail</label>
+                                                <input id="email" name="email" type="email" class="form-control form-control-lg" required>
+                                            </div>
 
-                                <div class="col-md-3">
-                                    <label for="mobilePhone" class="form-label">Celular</label>
-                                    <input id="mobilePhone" name="mobilePhone" type="text" inputmode="numeric" class="form-control form-control-lg" required>
-                                </div>
+                                            <div class="col-md-3">
+                                                <label for="phone" class="form-label">Telefone</label>
+                                                <input id="phone" name="phone" type="text" inputmode="numeric" class="form-control form-control-lg">
+                                            </div>
 
-                                <div class="col-md-6">
-                                    <label for="address" class="form-label">Endereco</label>
-                                    <input id="address" name="address" type="text" class="form-control form-control-lg">
-                                </div>
+                                            <div class="col-md-3">
+                                                <label for="mobilePhone" class="form-label">Celular</label>
+                                                <input id="mobilePhone" name="mobilePhone" type="text" inputmode="numeric" class="form-control form-control-lg" required>
+                                            </div>
 
-                                <div class="col-md-2">
-                                    <label for="addressNumber" class="form-label">Numero</label>
-                                    <input id="addressNumber" name="addressNumber" type="number" class="form-control form-control-lg">
-                                </div>
+                                            <div class="col-md-6">
+                                                <label for="address" class="form-label">Endereco</label>
+                                                <input id="address" name="address" type="text" class="form-control form-control-lg">
+                                            </div>
 
-                                <div class="col-md-4">
-                                    <label for="complement" class="form-label">Complemento</label>
-                                    <input id="complement" name="complement" type="text" class="form-control form-control-lg">
-                                </div>
+                                            <div class="col-md-2">
+                                                <label for="addressNumber" class="form-label">Numero</label>
+                                                <input id="addressNumber" name="addressNumber" type="number" class="form-control form-control-lg">
+                                            </div>
 
-                                <div class="col-md-4">
-                                    <label for="province" class="form-label">Bairro</label>
-                                    <input id="province" name="province" type="text" class="form-control form-control-lg">
-                                </div>
+                                            <div class="col-md-4">
+                                                <label for="complement" class="form-label">Complemento</label>
+                                                <input id="complement" name="complement" type="text" class="form-control form-control-lg">
+                                            </div>
 
-                                <div class="col-md-4">
-                                    <label for="postalCode" class="form-label">CEP</label>
-                                    <input id="postalCode" name="postalCode" type="text" class="form-control form-control-lg">
+                                            <div class="col-md-4">
+                                                <label for="province" class="form-label">Bairro</label>
+                                                <input id="province" name="province" type="text" class="form-control form-control-lg">
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <label for="postalCode" class="form-label">CEP</label>
+                                                <input id="postalCode" name="postalCode" type="text" class="form-control form-control-lg">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="col-12">
-                                    <label for="observations" class="form-label">Nome Completo do Desbravador</label>
-                                    <input id="observations" name="observations" class="form-control form-control-lg" />
+                                    <div class="subsection-card">
+                                        <div class="subsection-header subsection-header-inline">
+                                            <div>
+                                                <span class="subsection-kicker">Etapa 2</span>
+                                                <h3 class="h5 mb-1">Desbravadores vinculados</h3>
+                                                <p class="text-secondary mb-0">
+                                                    Adicione quantos desbravadores forem necessarios. O valor total a pagar e recalculado automaticamente.
+                                                </p>
+                                            </div>
+                                            <button
+                                                type="button"
+                                                id="addAdventurerButton"
+                                                class="btn btn-outline-secondary px-4"
+                                            >
+                                                Adicionar desbravador
+                                            </button>
+                                        </div>
+
+                                        <div class="adventurers-table-shell">
+                                            <div class="table-responsive">
+                                                <table class="table adventurers-table align-middle mb-0" aria-describedby="adventurersTableHelp">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" class="adventurers-col-index">#</th>
+                                                            <th scope="col">Nome completo do desbravador</th>
+                                                            <th scope="col" class="adventurers-col-action">Acao</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="adventurersList" aria-live="polite"></tbody>
+                                                </table>
+                                            </div>
+                                            <p id="adventurersTableHelp" class="table-helper-text mb-0">
+                                                Cada linha representa um desbravador vinculado ao mesmo responsavel.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="subsection-card billing-card">
+                                        <div class="subsection-header">
+                                            <div>
+                                                <span class="subsection-kicker">Etapa 3</span>
+                                                <h3 class="h5 mb-1">Resumo da cobranca</h3>
+                                                <p class="text-secondary mb-0">
+                                                    O calculo usa a regra vigente para definir o valor total devido pelo responsavel.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="billing-summary-grid">
+                                            <div class="billing-summary-item">
+                                                <span class="billing-label">Quantidade de Desbravadores</span>
+                                                <strong id="adventurerCountValue" class="billing-value">1</strong>
+                                            </div>
+
+                                            <div class="billing-summary-item billing-summary-highlight">
+                                                <span class="billing-label">Valor total a pagar</span>
+                                                <strong id="monthlyAmountValue" class="billing-value">R$ 185,00</strong>
+                                                <span id="billingTierValue" class="billing-tier">Faixa vigente da v1.0</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="observations" class="form-label">Observacoes</label>
+                                    <textarea
+                                        id="observations"
+                                        name="observations"
+                                        rows="4"
+                                        class="form-control form-control-lg"
+                                        placeholder="Informacoes extras sobre o cadastro, pagamento ou acompanhamento."
+                                    ></textarea>
                                 </div>
 
                                 <div class="col-12">
@@ -110,6 +232,7 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="pricing-rules.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
